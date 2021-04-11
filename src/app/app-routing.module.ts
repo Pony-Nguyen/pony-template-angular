@@ -3,20 +3,20 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './services/auth.guard';
 const routes: Routes = [
   {
-    path: 'dashboard',
+    path: '',
     loadChildren: () =>
       import('./pages/dashboard-layout/dashboard-layout.module').then(
         (m) => m.DashboardLayoutModule
       ),
     // canActivate: [AuthGuard],
   },
-  {
-    path: '',
-    loadChildren: () =>
-      import('./pages/login-layout/login-layout.module').then(
-        (m) => m.LoginLayoutModule
-      ),
-  },
+  // {
+  //   path: '',
+  //   loadChildren: () =>
+  //     import('./pages/login-layout/login-layout.module').then(
+  //       (m) => m.LoginLayoutModule
+  //     ),
+  // },
 ];
 
 @NgModule({
